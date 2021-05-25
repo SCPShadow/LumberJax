@@ -21,6 +21,7 @@ local Player = Instance.new("TextButton")
 local WayPoints = Instance.new("TextButton")
 local Misc = Instance.new("TextButton")
 local Credits = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
 local MainLabel = Instance.new("TextLabel")
 local WaypointsMenu = Instance.new("Frame")
 local ColorLine_3 = Instance.new("Frame")
@@ -66,7 +67,7 @@ MainFrame.Parent = LumberJax
 MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MainFrame.BackgroundTransparency = 1.000
 MainFrame.BorderSizePixel = 0
-MainFrame.Position = UDim2.new(-1, 0, 0.100000001, 0)
+MainFrame.Position = UDim2.new(0.0500000007, 0, 0.100000001, 0)
 MainFrame.Size = UDim2.new(0, 955, 0, 470)
 
 DragFramePlayer.Name = "DragFramePlayer"
@@ -233,6 +234,19 @@ Credits.Text = "Credits"
 Credits.TextColor3 = Color3.fromRGB(121, 121, 121)
 Credits.TextSize = 20.000
 Credits.TextWrapped = true
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 0.759740233, 0)
+TextLabel.Size = UDim2.new(0, 101, 0, 31)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Check console for commands and info :)"
+TextLabel.TextColor3 = Color3.fromRGB(0, 170, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
 
 MainLabel.Name = "MainLabel"
 MainLabel.Parent = DragFrameMain
@@ -600,53 +614,7 @@ CloseButton_4.TextWrapped = true
 
 -- Scripts:
 
-local function YBFBV_fake_script() -- MainFrame.ToggleScript 
-	local script = Instance.new('LocalScript', MainFrame)
-
-	--[[
-	
-	local mouse = game.Players.LocalPlayer:GetMouse()
-	local gui = game.Players.LocalPlayer.PlayerGui.LumberJax.MainFrame -- replace Frame to the name of the frame your gui is in
-	local visible = false
-	local openKey = Enum.KeyCode.Q
-	
-	game:GetService("UserInputService").InputBegan:Connect(function(InputData)
-		if InputData.KeyCode ==  openKey and visible == false then
-			local Main = script.Parent
-			Main:TweenPosition(UDim2.new(0.05, 0, 0.1, 0))
-			wait(0.5)
-			visible = true
-		else
-			local Main = script.Parent
-			Main:TweenPosition(UDim2.new(-1, 0, 0.1, 0))
-			wait(0.5)
-			visible = false
-		end
-	end)
-	--]]
-	
-	local UIS = game:GetService("UserInputService")
-	local OpenKEY = Enum.KeyCode.Q
-	local visible = false
-	
-	UIS.InputBegan:Connect(function(IData)
-		if UIS:GetFocusedTextBox() == nil then
-			if IData.KeyCode == OpenKEY and visible == false then
-				local Main = script.Parent
-				Main:TweenPosition(UDim2.new(0.05, 0, 0.1, 0))
-				wait(0.5)
-				visible = true
-			elseif IData.KeyCode == OpenKEY and visible == true then
-				local Main = script.Parent
-				Main:TweenPosition(UDim2.new(-1, 0, 0.1, 0))
-				wait(0.5)
-				visible = false
-			end
-		end
-	end)
-end
-coroutine.wrap(YBFBV_fake_script)()
-local function DCREL_fake_script() -- DragFramePlayer.Drag 
+local function MSYWXLQ_fake_script() -- DragFramePlayer.Drag 
 	local script = Instance.new('LocalScript', DragFramePlayer)
 
 	local UIS = game:GetService("UserInputService")
@@ -687,8 +655,8 @@ local function DCREL_fake_script() -- DragFramePlayer.Drag
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(DCREL_fake_script)()
-local function GPOKS_fake_script() -- DragFrameMain.Drag 
+coroutine.wrap(MSYWXLQ_fake_script)()
+local function KDDW_fake_script() -- DragFrameMain.Drag 
 	local script = Instance.new('LocalScript', DragFrameMain)
 
 	local UIS = game:GetService("UserInputService")
@@ -729,8 +697,8 @@ local function GPOKS_fake_script() -- DragFrameMain.Drag
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(GPOKS_fake_script)()
-local function BKXG_fake_script() -- WaypointsMenu.Drag 
+coroutine.wrap(KDDW_fake_script)()
+local function DJHB_fake_script() -- WaypointsMenu.Drag 
 	local script = Instance.new('LocalScript', WaypointsMenu)
 
 	local UIS = game:GetService("UserInputService")
@@ -771,10 +739,15 @@ local function BKXG_fake_script() -- WaypointsMenu.Drag
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(BKXG_fake_script)()
-local function AQVXWD_fake_script() -- MainFrame.Handler 
+coroutine.wrap(DJHB_fake_script)()
+local function FESBI_fake_script() -- MainFrame.Handler 
 	local script = Instance.new('LocalScript', MainFrame)
 
+	print("KeyBinds:")
+	print("Q: Toggle GUI")
+	print("idontknowhowtoenterakey is the key for FE Building")
+	print("Remote Spy prints the stuff to console")
+	
 	local Player = game.Players.LocalPlayer
 	Player.CharacterAdded:Connect(function()
 		local plr = game:GetService("Players").LocalPlayer
@@ -1185,8 +1158,8 @@ local function AQVXWD_fake_script() -- MainFrame.Handler
 		print("\nRan Vaeb's RemoteSpy\n")
 	end)
 end
-coroutine.wrap(AQVXWD_fake_script)()
-local function UFQN_fake_script() -- DragFrameMisc.Drag 
+coroutine.wrap(FESBI_fake_script)()
+local function IOMGJGZ_fake_script() -- DragFrameMisc.Drag 
 	local script = Instance.new('LocalScript', DragFrameMisc)
 
 	local UIS = game:GetService("UserInputService")
@@ -1227,8 +1200,8 @@ local function UFQN_fake_script() -- DragFrameMisc.Drag
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(UFQN_fake_script)()
-local function LGZE_fake_script() -- DragFrameCredits.Drag 
+coroutine.wrap(IOMGJGZ_fake_script)()
+local function DCOPM_fake_script() -- DragFrameCredits.Drag 
 	local script = Instance.new('LocalScript', DragFrameCredits)
 
 	local UIS = game:GetService("UserInputService")
@@ -1269,4 +1242,51 @@ local function LGZE_fake_script() -- DragFrameCredits.Drag
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(LGZE_fake_script)()
+coroutine.wrap(DCOPM_fake_script)()
+local function BVVZ_fake_script() -- MainFrame.ToggleScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	--[[
+	
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	local gui = game.Players.LocalPlayer.PlayerGui.LumberJax.MainFrame -- replace Frame to the name of the frame your gui is in
+	local visible = false
+	local openKey = Enum.KeyCode.Q
+	
+	game:GetService("UserInputService").InputBegan:Connect(function(InputData)
+		if InputData.KeyCode ==  openKey and visible == false then
+			local Main = script.Parent
+			Main:TweenPosition(UDim2.new(0.05, 0, 0.1, 0))
+			wait(0.5)
+			visible = true
+		else
+			local Main = script.Parent
+			Main:TweenPosition(UDim2.new(-1, 0, 0.1, 0))
+			wait(0.5)
+			visible = false
+		end
+	end)
+	--]]
+	
+	local UIS = game:GetService("UserInputService")
+	local OpenKEY = Enum.KeyCode.Q
+	local visible = true
+	
+	UIS.InputBegan:Connect(function(IData)
+		if UIS:GetFocusedTextBox() == nil then
+			if IData.KeyCode == OpenKEY and visible == false then
+				local Main = script.Parent
+				Main:TweenPosition(UDim2.new(0.05, 0, 0.1, 0))
+				wait(0.5)
+				visible = true
+			elseif IData.KeyCode == OpenKEY and visible == true then
+				local Main = script.Parent
+				Main:TweenPosition(UDim2.new(-1, 0, 0.1, 0))
+				wait(0.5)
+				visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(BVVZ_fake_script)()
+
