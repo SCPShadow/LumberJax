@@ -1,0 +1,1272 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local LumberJax = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local DragFramePlayer = Instance.new("Frame")
+local ColorLine = Instance.new("Frame")
+local MainPlayer = Instance.new("Frame")
+local JumpBox = Instance.new("TextBox")
+local JumpButton = Instance.new("TextButton")
+local SpeedBox = Instance.new("TextBox")
+local SpeedButton = Instance.new("TextButton")
+local PlayerLabel = Instance.new("TextLabel")
+local CloseButton = Instance.new("TextButton")
+local DragFrameMain = Instance.new("Frame")
+local ColorLine_2 = Instance.new("Frame")
+local Main = Instance.new("Frame")
+local Player = Instance.new("TextButton")
+local WayPoints = Instance.new("TextButton")
+local Misc = Instance.new("TextButton")
+local Credits = Instance.new("TextButton")
+local MainLabel = Instance.new("TextLabel")
+local WaypointsMenu = Instance.new("Frame")
+local ColorLine_3 = Instance.new("Frame")
+local Waypoints = Instance.new("Frame")
+local LinksLogic = Instance.new("TextButton")
+local FancyFurnishings = Instance.new("TextButton")
+local FineArtsShop = Instance.new("TextButton")
+local StrangeMan = Instance.new("TextButton")
+local Dock = Instance.new("TextButton")
+local BobsShack = Instance.new("TextButton")
+local TheDen = Instance.new("TextButton")
+local Bridge = Instance.new("TextButton")
+local ShrineOfSight = Instance.new("TextButton")
+local SkiLodge = Instance.new("TextButton")
+local VolcanoWin = Instance.new("TextButton")
+local PlotTP = Instance.new("TextButton")
+local WaypointsLabel = Instance.new("TextLabel")
+local CloseButton_2 = Instance.new("TextButton")
+local DragFrameMisc = Instance.new("Frame")
+local ColorLine_4 = Instance.new("Frame")
+local MiscMenu = Instance.new("Frame")
+local IY = Instance.new("TextButton")
+local RemoteSpy = Instance.new("TextButton")
+local FeBuilding = Instance.new("TextButton")
+local MainLabel_2 = Instance.new("TextLabel")
+local CloseButton_3 = Instance.new("TextButton")
+local DragFrameCredits = Instance.new("Frame")
+local ColorLine_5 = Instance.new("Frame")
+local MiscMenu_2 = Instance.new("Frame")
+local GUICredits = Instance.new("TextLabel")
+local ScriptCredits = Instance.new("TextLabel")
+local MainLabel_3 = Instance.new("TextLabel")
+local CloseButton_4 = Instance.new("TextButton")
+
+--Properties:
+
+LumberJax.Name = "LumberJax"
+LumberJax.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LumberJax.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = LumberJax
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(-1, 0, 0.100000001, 0)
+MainFrame.Size = UDim2.new(0, 955, 0, 470)
+
+DragFramePlayer.Name = "DragFramePlayer"
+DragFramePlayer.Parent = MainFrame
+DragFramePlayer.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+DragFramePlayer.Position = UDim2.new(0.276439786, 0, 0.0404255316, 0)
+DragFramePlayer.Size = UDim2.new(0, 99, 0, 23)
+DragFramePlayer.Visible = false
+
+ColorLine.Name = "ColorLine"
+ColorLine.Parent = DragFramePlayer
+ColorLine.BackgroundColor3 = Color3.fromRGB(239, 0, 0)
+ColorLine.BorderSizePixel = 0
+ColorLine.Position = UDim2.new(-0.00999999978, 0, 1, 0)
+ColorLine.Size = UDim2.new(0, 101, 0, 2)
+
+MainPlayer.Name = "MainPlayer"
+MainPlayer.Parent = DragFramePlayer
+MainPlayer.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MainPlayer.BorderSizePixel = 0
+MainPlayer.Position = UDim2.new(-0.0100000557, 0, 1.0869565, 0)
+MainPlayer.Size = UDim2.new(0, 101, 0, 105)
+
+JumpBox.Name = "JumpBox"
+JumpBox.Parent = MainPlayer
+JumpBox.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+JumpBox.BorderSizePixel = 0
+JumpBox.Position = UDim2.new(0.059406016, 0, 0.481433004, 0)
+JumpBox.Size = UDim2.new(0, 89, 0, 15)
+JumpBox.Font = Enum.Font.SourceSansSemibold
+JumpBox.PlaceholderText = "JumpPower Here"
+JumpBox.Text = ""
+JumpBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+JumpBox.TextSize = 12.000
+JumpBox.TextWrapped = true
+JumpBox.TextXAlignment = Enum.TextXAlignment.Left
+
+JumpButton.Name = "JumpButton"
+JumpButton.Parent = MainPlayer
+JumpButton.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+JumpButton.BorderSizePixel = 0
+JumpButton.Position = UDim2.new(7.4505806e-08, 0, 0.672260702, 0)
+JumpButton.Size = UDim2.new(0, 101, 0, 12)
+JumpButton.Font = Enum.Font.SourceSansSemibold
+JumpButton.Text = "Set JumpPower"
+JumpButton.TextColor3 = Color3.fromRGB(121, 121, 121)
+JumpButton.TextSize = 14.000
+
+SpeedBox.Name = "SpeedBox"
+SpeedBox.Parent = MainPlayer
+SpeedBox.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+SpeedBox.BorderSizePixel = 0
+SpeedBox.Position = UDim2.new(0.0495050251, 0, 0.0987889767, 0)
+SpeedBox.Size = UDim2.new(0, 89, 0, 15)
+SpeedBox.Font = Enum.Font.SourceSansSemibold
+SpeedBox.PlaceholderText = "WalkSpeed Here"
+SpeedBox.Text = ""
+SpeedBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedBox.TextSize = 12.000
+SpeedBox.TextWrapped = true
+SpeedBox.TextXAlignment = Enum.TextXAlignment.Left
+
+SpeedButton.Name = "SpeedButton"
+SpeedButton.Parent = MainPlayer
+SpeedButton.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+SpeedButton.BorderSizePixel = 0
+SpeedButton.Position = UDim2.new(7.55385585e-08, 0, 0.280092925, 0)
+SpeedButton.Size = UDim2.new(0, 101, 0, 12)
+SpeedButton.Font = Enum.Font.SourceSansSemibold
+SpeedButton.Text = "Set WalkSpeed"
+SpeedButton.TextColor3 = Color3.fromRGB(121, 121, 121)
+SpeedButton.TextSize = 14.000
+
+PlayerLabel.Name = "PlayerLabel"
+PlayerLabel.Parent = DragFramePlayer
+PlayerLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerLabel.BackgroundTransparency = 1.000
+PlayerLabel.BorderSizePixel = 0
+PlayerLabel.Position = UDim2.new(0.0909090936, 0, 0, 0)
+PlayerLabel.Size = UDim2.new(0, 100, 0, 23)
+PlayerLabel.Font = Enum.Font.SourceSansBold
+PlayerLabel.Text = "Player"
+PlayerLabel.TextColor3 = Color3.fromRGB(217, 0, 0)
+PlayerLabel.TextSize = 20.000
+PlayerLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = PlayerLabel
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.BackgroundTransparency = 1.000
+CloseButton.BorderSizePixel = 0
+CloseButton.Position = UDim2.new(0.720000029, 0, 0, 0)
+CloseButton.Size = UDim2.new(0, 28, 0, 15)
+CloseButton.Font = Enum.Font.SourceSansBold
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.fromRGB(217, 0, 0)
+CloseButton.TextSize = 22.000
+CloseButton.TextWrapped = true
+
+DragFrameMain.Name = "DragFrameMain"
+DragFrameMain.Parent = MainFrame
+DragFrameMain.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+DragFrameMain.Position = UDim2.new(0.128795803, 0, 0.0404255316, 0)
+DragFrameMain.Size = UDim2.new(0, 99, 0, 23)
+
+ColorLine_2.Name = "ColorLine"
+ColorLine_2.Parent = DragFrameMain
+ColorLine_2.BackgroundColor3 = Color3.fromRGB(239, 0, 0)
+ColorLine_2.BorderSizePixel = 0
+ColorLine_2.Position = UDim2.new(-0.00999999978, 0, 1, 0)
+ColorLine_2.Size = UDim2.new(0, 101, 0, 2)
+
+Main.Name = "Main"
+Main.Parent = DragFrameMain
+Main.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(-0.00999997836, 0, 1.0869565, 0)
+Main.Size = UDim2.new(0, 101, 0, 154)
+
+Player.Name = "Player"
+Player.Parent = Main
+Player.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+Player.BorderSizePixel = 0
+Player.Position = UDim2.new(7.55385585e-08, 0, 0.115168542, 0)
+Player.Size = UDim2.new(0, 101, 0, 12)
+Player.Font = Enum.Font.SourceSansSemibold
+Player.Text = "Player"
+Player.TextColor3 = Color3.fromRGB(121, 121, 121)
+Player.TextSize = 20.000
+Player.TextWrapped = true
+
+WayPoints.Name = "WayPoints"
+WayPoints.Parent = Main
+WayPoints.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+WayPoints.BorderSizePixel = 0
+WayPoints.Position = UDim2.new(7.55385585e-08, 0, 0.264519185, 0)
+WayPoints.Size = UDim2.new(0, 101, 0, 12)
+WayPoints.Font = Enum.Font.SourceSansSemibold
+WayPoints.Text = "Waypoints"
+WayPoints.TextColor3 = Color3.fromRGB(121, 121, 121)
+WayPoints.TextSize = 20.000
+WayPoints.TextWrapped = true
+
+Misc.Name = "Misc"
+Misc.Parent = Main
+Misc.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+Misc.BorderSizePixel = 0
+Misc.Position = UDim2.new(7.55385585e-08, 0, 0.433350354, 0)
+Misc.Size = UDim2.new(0, 101, 0, 12)
+Misc.Font = Enum.Font.SourceSansSemibold
+Misc.Text = "Misc"
+Misc.TextColor3 = Color3.fromRGB(121, 121, 121)
+Misc.TextSize = 20.000
+Misc.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = Main
+Credits.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(7.55385585e-08, 0, 0.608675003, 0)
+Credits.Size = UDim2.new(0, 101, 0, 12)
+Credits.Font = Enum.Font.SourceSansSemibold
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(121, 121, 121)
+Credits.TextSize = 20.000
+Credits.TextWrapped = true
+
+MainLabel.Name = "MainLabel"
+MainLabel.Parent = DragFrameMain
+MainLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainLabel.BackgroundTransparency = 1.000
+MainLabel.BorderSizePixel = 0
+MainLabel.Position = UDim2.new(-0.101010099, 0, 0, 0)
+MainLabel.Size = UDim2.new(0, 100, 0, 23)
+MainLabel.Font = Enum.Font.SourceSansBold
+MainLabel.Text = "Lumber Jax"
+MainLabel.TextColor3 = Color3.fromRGB(217, 0, 0)
+MainLabel.TextSize = 16.000
+MainLabel.TextWrapped = true
+
+WaypointsMenu.Name = "WaypointsMenu"
+WaypointsMenu.Parent = MainFrame
+WaypointsMenu.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+WaypointsMenu.Position = UDim2.new(0.455497384, 0, 0.0404255316, 0)
+WaypointsMenu.Size = UDim2.new(0, 99, 0, 23)
+WaypointsMenu.Visible = false
+
+ColorLine_3.Name = "ColorLine"
+ColorLine_3.Parent = WaypointsMenu
+ColorLine_3.BackgroundColor3 = Color3.fromRGB(239, 0, 0)
+ColorLine_3.BorderSizePixel = 0
+ColorLine_3.Position = UDim2.new(-0.00999999978, 0, 1, 0)
+ColorLine_3.Size = UDim2.new(0, 101, 0, 2)
+
+Waypoints.Name = "Waypoints"
+Waypoints.Parent = WaypointsMenu
+Waypoints.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Waypoints.BorderSizePixel = 0
+Waypoints.Position = UDim2.new(-0.00999990106, 0, 1.0869565, 0)
+Waypoints.Size = UDim2.new(0, 101, 0, 395)
+
+LinksLogic.Name = "LinksLogic"
+LinksLogic.Parent = Waypoints
+LinksLogic.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+LinksLogic.BorderSizePixel = 0
+LinksLogic.Position = UDim2.new(7.63684511e-08, 0, 0.029092595, 0)
+LinksLogic.Size = UDim2.new(0, 101, 0, 12)
+LinksLogic.Font = Enum.Font.SourceSansSemibold
+LinksLogic.Text = "Links Logic"
+LinksLogic.TextColor3 = Color3.fromRGB(121, 121, 121)
+LinksLogic.TextSize = 20.000
+LinksLogic.TextWrapped = true
+
+FancyFurnishings.Name = "FancyFurnishings"
+FancyFurnishings.Parent = Waypoints
+FancyFurnishings.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+FancyFurnishings.BorderSizePixel = 0
+FancyFurnishings.Position = UDim2.new(7.63684511e-08, 0, 0.102510303, 0)
+FancyFurnishings.Size = UDim2.new(0, 101, 0, 12)
+FancyFurnishings.Font = Enum.Font.SourceSansSemibold
+FancyFurnishings.Text = "Fancy Furnishings"
+FancyFurnishings.TextColor3 = Color3.fromRGB(121, 121, 121)
+FancyFurnishings.TextSize = 15.000
+FancyFurnishings.TextWrapped = true
+
+FineArtsShop.Name = "FineArtsShop"
+FineArtsShop.Parent = Waypoints
+FineArtsShop.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+FineArtsShop.BorderSizePixel = 0
+FineArtsShop.Position = UDim2.new(7.63684511e-08, 0, 0.168333098, 0)
+FineArtsShop.Size = UDim2.new(0, 101, 0, 12)
+FineArtsShop.Font = Enum.Font.SourceSansSemibold
+FineArtsShop.Text = "Fine Arts Shop"
+FineArtsShop.TextColor3 = Color3.fromRGB(121, 121, 121)
+FineArtsShop.TextSize = 18.000
+FineArtsShop.TextWrapped = true
+
+StrangeMan.Name = "StrangeMan"
+StrangeMan.Parent = Waypoints
+StrangeMan.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+StrangeMan.BorderSizePixel = 0
+StrangeMan.Position = UDim2.new(7.63684511e-08, 0, 0.378459662, 0)
+StrangeMan.Size = UDim2.new(0, 101, 0, 12)
+StrangeMan.Font = Enum.Font.SourceSansSemibold
+StrangeMan.Text = "Stranger"
+StrangeMan.TextColor3 = Color3.fromRGB(121, 121, 121)
+StrangeMan.TextSize = 20.000
+StrangeMan.TextWrapped = true
+
+Dock.Name = "Dock"
+Dock.Parent = Waypoints
+Dock.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+Dock.BorderSizePixel = 0
+Dock.Position = UDim2.new(7.63684511e-08, 0, 0.239219174, 0)
+Dock.Size = UDim2.new(0, 101, 0, 12)
+Dock.Font = Enum.Font.SourceSansSemibold
+Dock.Text = "Dock"
+Dock.TextColor3 = Color3.fromRGB(121, 121, 121)
+Dock.TextSize = 20.000
+Dock.TextWrapped = true
+
+BobsShack.Name = "BobsShack"
+BobsShack.Parent = Waypoints
+BobsShack.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+BobsShack.BorderSizePixel = 0
+BobsShack.Position = UDim2.new(7.63684511e-08, 0, 0.312636882, 0)
+BobsShack.Size = UDim2.new(0, 101, 0, 12)
+BobsShack.Font = Enum.Font.SourceSansSemibold
+BobsShack.Text = "Bobs Shack"
+BobsShack.TextColor3 = Color3.fromRGB(121, 121, 121)
+BobsShack.TextSize = 20.000
+BobsShack.TextWrapped = true
+
+TheDen.Name = "TheDen"
+TheDen.Parent = Waypoints
+TheDen.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+TheDen.BorderSizePixel = 0
+TheDen.Position = UDim2.new(7.63684511e-08, 0, 0.57845968, 0)
+TheDen.Size = UDim2.new(0, 101, 0, 12)
+TheDen.Font = Enum.Font.SourceSansSemibold
+TheDen.Text = "The Den"
+TheDen.TextColor3 = Color3.fromRGB(121, 121, 121)
+TheDen.TextSize = 20.000
+TheDen.TextWrapped = true
+
+Bridge.Name = "Bridge"
+Bridge.Parent = Waypoints
+Bridge.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+Bridge.BorderSizePixel = 0
+Bridge.Position = UDim2.new(7.63684511e-08, 0, 0.5126369, 0)
+Bridge.Size = UDim2.new(0, 101, 0, 12)
+Bridge.Font = Enum.Font.SourceSansSemibold
+Bridge.Text = "Bridge"
+Bridge.TextColor3 = Color3.fromRGB(121, 121, 121)
+Bridge.TextSize = 20.000
+Bridge.TextWrapped = true
+
+ShrineOfSight.Name = "ShrineOfSight"
+ShrineOfSight.Parent = Waypoints
+ShrineOfSight.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+ShrineOfSight.BorderSizePixel = 0
+ShrineOfSight.Position = UDim2.new(7.63684511e-08, 0, 0.439219177, 0)
+ShrineOfSight.Size = UDim2.new(0, 101, 0, 12)
+ShrineOfSight.Font = Enum.Font.SourceSansSemibold
+ShrineOfSight.Text = "Shrine Of Sight"
+ShrineOfSight.TextColor3 = Color3.fromRGB(121, 121, 121)
+ShrineOfSight.TextSize = 15.000
+ShrineOfSight.TextWrapped = true
+
+SkiLodge.Name = "SkiLodge"
+SkiLodge.Parent = Waypoints
+SkiLodge.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+SkiLodge.BorderSizePixel = 0
+SkiLodge.Position = UDim2.new(7.63684511e-08, 0, 0.780991316, 0)
+SkiLodge.Size = UDim2.new(0, 101, 0, 12)
+SkiLodge.Font = Enum.Font.SourceSansSemibold
+SkiLodge.Text = "Ski Lodge"
+SkiLodge.TextColor3 = Color3.fromRGB(121, 121, 121)
+SkiLodge.TextSize = 20.000
+SkiLodge.TextWrapped = true
+
+VolcanoWin.Name = "VolcanoWin"
+VolcanoWin.Parent = Waypoints
+VolcanoWin.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+VolcanoWin.BorderSizePixel = 0
+VolcanoWin.Position = UDim2.new(7.63684511e-08, 0, 0.715168536, 0)
+VolcanoWin.Size = UDim2.new(0, 101, 0, 12)
+VolcanoWin.Font = Enum.Font.SourceSansSemibold
+VolcanoWin.Text = "Volcano"
+VolcanoWin.TextColor3 = Color3.fromRGB(121, 121, 121)
+VolcanoWin.TextSize = 20.000
+VolcanoWin.TextWrapped = true
+
+PlotTP.Name = "PlotTP"
+PlotTP.Parent = Waypoints
+PlotTP.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+PlotTP.BorderSizePixel = 0
+PlotTP.Position = UDim2.new(7.63684511e-08, 0, 0.641750813, 0)
+PlotTP.Size = UDim2.new(0, 101, 0, 12)
+PlotTP.Font = Enum.Font.SourceSansSemibold
+PlotTP.Text = "Plot"
+PlotTP.TextColor3 = Color3.fromRGB(121, 121, 121)
+PlotTP.TextSize = 20.000
+PlotTP.TextWrapped = true
+
+WaypointsLabel.Name = "WaypointsLabel"
+WaypointsLabel.Parent = WaypointsMenu
+WaypointsLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WaypointsLabel.BackgroundTransparency = 1.000
+WaypointsLabel.BorderSizePixel = 0
+WaypointsLabel.Position = UDim2.new(-0.0707070678, 0, 0, 0)
+WaypointsLabel.Size = UDim2.new(0, 100, 0, 23)
+WaypointsLabel.Font = Enum.Font.SourceSansBold
+WaypointsLabel.Text = "Waypoints"
+WaypointsLabel.TextColor3 = Color3.fromRGB(217, 0, 0)
+WaypointsLabel.TextSize = 16.000
+WaypointsLabel.TextWrapped = true
+
+CloseButton_2.Name = "CloseButton"
+CloseButton_2.Parent = WaypointsLabel
+CloseButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton_2.BackgroundTransparency = 1.000
+CloseButton_2.BorderSizePixel = 0
+CloseButton_2.Position = UDim2.new(0.860000074, 0, 0, 0)
+CloseButton_2.Size = UDim2.new(0, 24, 0, 15)
+CloseButton_2.Font = Enum.Font.SourceSansBold
+CloseButton_2.Text = "X"
+CloseButton_2.TextColor3 = Color3.fromRGB(217, 0, 0)
+CloseButton_2.TextSize = 22.000
+CloseButton_2.TextWrapped = true
+
+DragFrameMisc.Name = "DragFrameMisc"
+DragFrameMisc.Parent = MainFrame
+DragFrameMisc.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+DragFrameMisc.Position = UDim2.new(0.67120415, 0, 0.0404255316, 0)
+DragFrameMisc.Size = UDim2.new(0, 99, 0, 23)
+DragFrameMisc.Visible = false
+
+ColorLine_4.Name = "ColorLine"
+ColorLine_4.Parent = DragFrameMisc
+ColorLine_4.BackgroundColor3 = Color3.fromRGB(239, 0, 0)
+ColorLine_4.BorderSizePixel = 0
+ColorLine_4.Position = UDim2.new(-0.00999999978, 0, 1, 0)
+ColorLine_4.Size = UDim2.new(0, 101, 0, 2)
+
+MiscMenu.Name = "MiscMenu"
+MiscMenu.Parent = DragFrameMisc
+MiscMenu.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MiscMenu.BorderSizePixel = 0
+MiscMenu.Position = UDim2.new(-0.00999990106, 0, 1.0869565, 0)
+MiscMenu.Size = UDim2.new(0, 101, 0, 161)
+
+IY.Name = "IY"
+IY.Parent = MiscMenu
+IY.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+IY.BorderSizePixel = 0
+IY.Position = UDim2.new(7.55385585e-08, 0, 0.0654790998, 0)
+IY.Size = UDim2.new(0, 101, 0, 12)
+IY.Font = Enum.Font.SourceSansSemibold
+IY.Text = "Infinite Yield"
+IY.TextColor3 = Color3.fromRGB(121, 121, 121)
+IY.TextSize = 20.000
+IY.TextWrapped = true
+
+RemoteSpy.Name = "RemoteSpy"
+RemoteSpy.Parent = MiscMenu
+RemoteSpy.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+RemoteSpy.BorderSizePixel = 0
+RemoteSpy.Position = UDim2.new(7.55385585e-08, 0, 0.245603323, 0)
+RemoteSpy.Size = UDim2.new(0, 101, 0, 12)
+RemoteSpy.Font = Enum.Font.SourceSansSemibold
+RemoteSpy.Text = "Remote Spy"
+RemoteSpy.TextColor3 = Color3.fromRGB(121, 121, 121)
+RemoteSpy.TextSize = 20.000
+RemoteSpy.TextWrapped = true
+
+FeBuilding.Name = "FeBuilding"
+FeBuilding.Parent = MiscMenu
+FeBuilding.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+FeBuilding.BorderSizePixel = 0
+FeBuilding.Position = UDim2.new(7.55385585e-08, 0, 0.419516385, 0)
+FeBuilding.Size = UDim2.new(0, 101, 0, 12)
+FeBuilding.Font = Enum.Font.SourceSansSemibold
+FeBuilding.Text = "FE Building"
+FeBuilding.TextColor3 = Color3.fromRGB(121, 121, 121)
+FeBuilding.TextSize = 20.000
+FeBuilding.TextWrapped = true
+
+MainLabel_2.Name = "MainLabel"
+MainLabel_2.Parent = DragFrameMisc
+MainLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainLabel_2.BackgroundTransparency = 1.000
+MainLabel_2.BorderSizePixel = 0
+MainLabel_2.Position = UDim2.new(-0.292929292, 0, 0, 0)
+MainLabel_2.Size = UDim2.new(0, 100, 0, 23)
+MainLabel_2.Font = Enum.Font.SourceSansBold
+MainLabel_2.Text = "Misc"
+MainLabel_2.TextColor3 = Color3.fromRGB(217, 0, 0)
+MainLabel_2.TextScaled = true
+MainLabel_2.TextSize = 16.000
+MainLabel_2.TextWrapped = true
+
+CloseButton_3.Name = "CloseButton"
+CloseButton_3.Parent = MainLabel_2
+CloseButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton_3.BackgroundTransparency = 1.000
+CloseButton_3.BorderSizePixel = 0
+CloseButton_3.Position = UDim2.new(1.05000007, 0, 0, 0)
+CloseButton_3.Size = UDim2.new(0, 24, 0, 15)
+CloseButton_3.Font = Enum.Font.SourceSansBold
+CloseButton_3.Text = "X"
+CloseButton_3.TextColor3 = Color3.fromRGB(217, 0, 0)
+CloseButton_3.TextSize = 22.000
+CloseButton_3.TextWrapped = true
+
+DragFrameCredits.Name = "DragFrameCredits"
+DragFrameCredits.Parent = MainFrame
+DragFrameCredits.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+DragFrameCredits.Position = UDim2.new(0.831413627, 0, 0.040425539, 0)
+DragFrameCredits.Size = UDim2.new(0, 99, 0, 23)
+DragFrameCredits.Visible = false
+
+ColorLine_5.Name = "ColorLine"
+ColorLine_5.Parent = DragFrameCredits
+ColorLine_5.BackgroundColor3 = Color3.fromRGB(239, 0, 0)
+ColorLine_5.BorderSizePixel = 0
+ColorLine_5.Position = UDim2.new(-0.00999999978, 0, 1, 0)
+ColorLine_5.Size = UDim2.new(0, 101, 0, 2)
+
+MiscMenu_2.Name = "MiscMenu"
+MiscMenu_2.Parent = DragFrameCredits
+MiscMenu_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+MiscMenu_2.BorderSizePixel = 0
+MiscMenu_2.Position = UDim2.new(-0.00999990106, 0, 1.0869565, 0)
+MiscMenu_2.Size = UDim2.new(0, 101, 0, 161)
+
+GUICredits.Name = "GUICredits"
+GUICredits.Parent = MiscMenu_2
+GUICredits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GUICredits.BackgroundTransparency = 1.000
+GUICredits.BorderSizePixel = 0
+GUICredits.Position = UDim2.new(0, 0, 0.10559006, 0)
+GUICredits.Size = UDim2.new(0, 101, 0, 30)
+GUICredits.Font = Enum.Font.SourceSans
+GUICredits.Text = "GUI by ThomasToken#7738"
+GUICredits.TextColor3 = Color3.fromRGB(207, 0, 0)
+GUICredits.TextScaled = true
+GUICredits.TextSize = 14.000
+GUICredits.TextWrapped = true
+
+ScriptCredits.Name = "ScriptCredits"
+ScriptCredits.Parent = MiscMenu_2
+ScriptCredits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptCredits.BackgroundTransparency = 1.000
+ScriptCredits.BorderSizePixel = 0
+ScriptCredits.Position = UDim2.new(0, 0, 0.472049683, 0)
+ScriptCredits.Size = UDim2.new(0, 101, 0, 56)
+ScriptCredits.Font = Enum.Font.SourceSans
+ScriptCredits.Text = "Credits to all respective owners of the scripts in this GUI"
+ScriptCredits.TextColor3 = Color3.fromRGB(207, 0, 0)
+ScriptCredits.TextScaled = true
+ScriptCredits.TextSize = 14.000
+ScriptCredits.TextWrapped = true
+
+MainLabel_3.Name = "MainLabel"
+MainLabel_3.Parent = DragFrameCredits
+MainLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainLabel_3.BackgroundTransparency = 1.000
+MainLabel_3.BorderSizePixel = 0
+MainLabel_3.Position = UDim2.new(-0.181818187, 0, 0, 0)
+MainLabel_3.Size = UDim2.new(0, 100, 0, 23)
+MainLabel_3.Font = Enum.Font.SourceSansBold
+MainLabel_3.Text = "Credits"
+MainLabel_3.TextColor3 = Color3.fromRGB(217, 0, 0)
+MainLabel_3.TextScaled = true
+MainLabel_3.TextSize = 16.000
+MainLabel_3.TextWrapped = true
+
+CloseButton_4.Name = "CloseButton"
+CloseButton_4.Parent = MainLabel_3
+CloseButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton_4.BackgroundTransparency = 1.000
+CloseButton_4.BorderSizePixel = 0
+CloseButton_4.Position = UDim2.new(1.00000012, 0, 0, 0)
+CloseButton_4.Size = UDim2.new(0, 24, 0, 15)
+CloseButton_4.Font = Enum.Font.SourceSansBold
+CloseButton_4.Text = "X"
+CloseButton_4.TextColor3 = Color3.fromRGB(217, 0, 0)
+CloseButton_4.TextSize = 22.000
+CloseButton_4.TextWrapped = true
+
+-- Scripts:
+
+local function YBFBV_fake_script() -- MainFrame.ToggleScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	--[[
+	
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	local gui = game.Players.LocalPlayer.PlayerGui.LumberJax.MainFrame -- replace Frame to the name of the frame your gui is in
+	local visible = false
+	local openKey = Enum.KeyCode.Q
+	
+	game:GetService("UserInputService").InputBegan:Connect(function(InputData)
+		if InputData.KeyCode ==  openKey and visible == false then
+			local Main = script.Parent
+			Main:TweenPosition(UDim2.new(0.05, 0, 0.1, 0))
+			wait(0.5)
+			visible = true
+		else
+			local Main = script.Parent
+			Main:TweenPosition(UDim2.new(-1, 0, 0.1, 0))
+			wait(0.5)
+			visible = false
+		end
+	end)
+	--]]
+	
+	local UIS = game:GetService("UserInputService")
+	local OpenKEY = Enum.KeyCode.Q
+	local visible = false
+	
+	UIS.InputBegan:Connect(function(IData)
+		if UIS:GetFocusedTextBox() == nil then
+			if IData.KeyCode == OpenKEY and visible == false then
+				local Main = script.Parent
+				Main:TweenPosition(UDim2.new(0.05, 0, 0.1, 0))
+				wait(0.5)
+				visible = true
+			elseif IData.KeyCode == OpenKEY and visible == true then
+				local Main = script.Parent
+				Main:TweenPosition(UDim2.new(-1, 0, 0.1, 0))
+				wait(0.5)
+				visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(YBFBV_fake_script)()
+local function DCREL_fake_script() -- DragFramePlayer.Drag 
+	local script = Instance.new('LocalScript', DragFramePlayer)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(DCREL_fake_script)()
+local function GPOKS_fake_script() -- DragFrameMain.Drag 
+	local script = Instance.new('LocalScript', DragFrameMain)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(GPOKS_fake_script)()
+local function BKXG_fake_script() -- WaypointsMenu.Drag 
+	local script = Instance.new('LocalScript', WaypointsMenu)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(BKXG_fake_script)()
+local function AQVXWD_fake_script() -- MainFrame.Handler 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local Player = game.Players.LocalPlayer
+	Player.CharacterAdded:Connect(function()
+		local plr = game:GetService("Players").LocalPlayer
+		local char = plr.Character
+		local mouse = plr:GetMouse()
+	
+		local newPart = Instance.new("Part")
+		local newWeld = Instance.new("Weld")
+		local hum = char:FindFirstChild("HumanoidRootPart")
+		newPart.Parent = workspace
+		newWeld.Parent = newPart
+		newPart.Position = Vector3.new(hum.Position)
+		newWeld.Part0 = hum
+		newWeld.Part1 = newPart
+		newPart.Name = "Bypassed"
+		hum.Name = "BypassedHum"
+		newPart.Transparency = 1
+		newPart.CanCollide = true
+		local humanoid = char:FindFirstChild("Humanoid")
+		humanoid.HipHeight = humanoid.HipHeight + 1.25
+	end)
+	
+	local WayPoints = {
+		["SpawnPoint"] = Vector3.new(155, 3, 74),
+		["Link's Logic"] = Vector3.new(4607, 7.5, -798),
+		["Fancy Furnishings"] = Vector3.new(491, 3, -1720),
+		["Fine Arts Shop"] = Vector3.new(5207, -166, 719),
+		["Bob's Shack"] = Vector3.new(260, 8, -2542),
+		["Strange Man"] = Vector3.new(1061, 16, 1131),
+		["Dock"] = CFrame.new(1114, 3.2, -197),
+		["Bridge"] = CFrame.new(113, 15, -977),
+		["Shrine Of Sight"] = CFrame.new(-1600, 205, 919),
+		["The Den"] = CFrame.new(323, 49, 1930),
+		["Volcano Win"] = CFrame.new(-1675, 358, 1476),
+		["Cave"] = Vector3.new(3581, -179, 430),
+		["Swamp"] = Vector3.new(-1209, 132, -801),
+		["SnowGlow Tree"] = CFrame.new(-1105.9, -6, -894),
+		["Ski Lodge"] = CFrame.new(1244, 66, 2306)
+	}
+	
+	local FancyFurnishings = script.Parent.WaypointsMenu.Waypoints.FancyFurnishings
+	local LinksLogic = script.Parent.WaypointsMenu.Waypoints.LinksLogic
+	local FineArtsShop = script.Parent.WaypointsMenu.Waypoints.FineArtsShop
+	local BobsShack = script.Parent.WaypointsMenu.Waypoints.BobsShack
+	local Stranger = script.Parent.WaypointsMenu.Waypoints.StrangeMan
+	local Dock = script.Parent.WaypointsMenu.Waypoints.Dock
+	local VolcanoWin = script.Parent.WaypointsMenu.Waypoints.VolcanoWin
+	local Plot = script.Parent.WaypointsMenu.Waypoints.PlotTP
+	local SkiLodge = script.Parent.WaypointsMenu.Waypoints.SkiLodge
+	
+	local Waypoints = script.Parent.WaypointsMenu
+	local Player = script.Parent.DragFramePlayer
+	local Credits = script.Parent.DragFrameCredits
+	local Misc = script.Parent.DragFrameMisc
+	local Mainn = script.Parent.DragFrameMain
+	
+	FancyFurnishings.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(WayPoints["Fancy Furnishings"])
+	end)
+	
+	LinksLogic.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(WayPoints["Link's Logic"])
+	end)
+	
+	FineArtsShop.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(WayPoints["Fine Arts Shop"])
+	end)
+	
+	BobsShack.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(WayPoints["Bob's Shack"])
+	end)
+	
+	Dock.MouseButton1Down:connect(function()
+		local uTorso = workspace:WaitForChild(game.Players.LocalPlayer.Name).HumanoidRootPart
+		uTorso.CFrame = WayPoints["Dock"]
+	end)
+	
+	Stranger.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(WayPoints["Strange Man"])
+	end)
+	
+	VolcanoWin.MouseButton1Down:connect(function()
+		local uTorso = workspace:WaitForChild(game.Players.LocalPlayer.Name).HumanoidRootPart
+		uTorso.CFrame = WayPoints["Volcano Win"]
+	end)
+	
+	Plot.MouseButton1Down:connect(function()
+		for i,v in pairs(game.Workspace.Properties:GetChildren()) do
+			if v.Owner.Value == game.Players.LocalPlayer then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.OriginSquare.CFrame + Vector3.new(0,10,0)
+			end
+		end
+	end)
+	
+	SkiLodge.MouseButton1Down:connect(function()
+		local uTorso = workspace:WaitForChild(game.Players.LocalPlayer.Name).HumanoidRootPart
+		uTorso.CFrame = WayPoints["Ski Lodge"]
+	end)
+	
+	Mainn.Main.Player.MouseButton1Click:Connect(function()
+		if Player.Visible then
+			Player.Visible = false
+		else
+			Player.Visible = true
+		end
+	end)
+	
+	Mainn.Main.Misc.MouseButton1Click:Connect(function()
+		if Misc.Visible then
+			Misc.Visible = false
+		else
+			Misc.Visible = true
+		end
+	end)
+	
+	Mainn.Main.Credits.MouseButton1Click:Connect(function()
+		if Credits.Visible then
+			Credits.Visible = false
+		else
+			Credits.Visible = true
+		end
+	end)
+	
+	Mainn.Main.WayPoints.MouseButton1Click:Connect(function()
+		if Waypoints.Visible then
+			Waypoints.Visible = false
+		else
+			Waypoints.Visible = true
+		end
+	end)
+	
+	Misc.MainLabel.CloseButton.MouseButton1Click:Connect(function()
+		Misc.Visible = false
+	end)
+	
+	Credits.MainLabel.CloseButton.MouseButton1Click:Connect(function()
+		Credits.Visible = false
+	end)
+	
+	Player.PlayerLabel.CloseButton.MouseButton1Click:Connect(function()
+		Player.Visible = false
+	end)
+	
+	Waypoints.WaypointsLabel.CloseButton.MouseButton1Click:Connect(function()
+		Waypoints.Visible = false
+	end)
+	
+	Player.MainPlayer.SpeedButton.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local speed = Player.MainPlayer.SpeedBox.Text
+		
+		player.Character.Humanoid.WalkSpeed = speed
+	end)
+	
+	Player.MainPlayer.JumpButton.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local jump = Player.MainPlayer.JumpBox.Text
+		if tonumber(jump) ~= nil then
+			print(jump)
+	
+			player.Character.Humanoid.UseJumpPower = true
+			player.Character.Humanoid.JumpPower = tonumber(jump)
+		end
+	end)
+	
+	Misc.MiscMenu.IY.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end)
+	
+	Misc.MiscMenu.FeBuilding.MouseButton1Click:Connect(function()
+		warn("Key is idontknowhowtoenterakey")
+		
+		_G.CheckCustomBuilds = true
+		_G.DefaulBuilds = true
+		_G.Barrier = true
+		_G.bridge2 = true
+		_G.bridge4 = true
+		_G.ladder = true
+		_G.Nazi = true
+		_G.penis = true
+		_G.platform = true
+		_G.stairs = true
+		_G.BigPP = true
+	
+		_G.FEb_defaultbuildfiles = true -- if it's not true it won't check CustomBuilds.txt and CustomBuilds.txt.txt
+		_G.FEb_defaultbuilds_errors = false
+		_G.FEb_CustombuildFiles = {}     -- example {"example.txt", "pathtoafolder/buildfile.txt", "https://pastebin.com/pasteid"}
+	
+		-- text building character source
+		_G.FEb_textbuldingcharset = "https://pastebin.com/raw/iHB6KfQF"
+		-- examples: "your_file.txt" "https://pastebin.com/raw/iHB6KfQF" "or directly as string"
+	
+		_G.RejoinWaitDelayForReExecute = 5  -- how long the script will wait before rejoining (for synapse script queing)
+	
+		loadstring(game:HttpGet("https://ssbtools.netlify.app/assets/storage/LOADSTRING_SCRIPT2.txt"))()
+	end)
+	
+	Misc.MiscMenu.RemoteSpy.MouseButton1Click:Connect(function()
+		--[[
+	 
+	    -Created by Vaeb.
+	 
+	]]
+	
+		_G.scanRemotes = true
+	
+		_G.ignoreNames = {
+			Event = true;
+			MessagesChanged = true;
+		}
+	
+		setreadonly(getrawmetatable(game), false)
+		local pseudoEnv = {}
+		local gameMeta = getrawmetatable(game)
+	
+		local tabChar = "      "
+	
+		local function getSmaller(a, b, notLast)
+			local aByte = a:byte() or -1
+			local bByte = b:byte() or -1
+			if aByte == bByte then
+				if notLast and #a == 1 and #b == 1 then
+					return -1
+				elseif #b == 1 then
+					return false
+				elseif #a == 1 then
+					return true
+				else
+					return getSmaller(a:sub(2), b:sub(2), notLast)
+				end
+			else
+				return aByte < bByte
+			end
+		end
+	
+		local function parseData(obj, numTabs, isKey, overflow, noTables, forceDict)
+			local objType = typeof(obj)
+			local objStr = tostring(obj)
+			if objType == "table" then
+				if noTables then
+					return objStr
+				end
+				local isCyclic = overflow[obj]
+				overflow[obj] = true
+				local out = {}
+				local nextIndex = 1
+				local isDict = false
+				local hasTables = false
+				local data = {}
+	
+				for key, val in next, obj do
+					if not hasTables and typeof(val) == "table" then
+						hasTables = true
+					end
+	
+					if not isDict and key ~= nextIndex then
+						isDict = true
+					else
+						nextIndex = nextIndex + 1
+					end
+	
+					data[#data+1] = {key, val}
+				end
+	
+				if isDict or hasTables or forceDict then
+					out[#out+1] = (isCyclic and "Cyclic " or "") .. "{"
+					table.sort(data, function(a, b)
+						local aType = typeof(a[2])
+						local bType = typeof(b[2])
+						if bType == "string" and aType ~= "string" then
+							return false
+						end
+						local res = getSmaller(aType, bType, true)
+						if res == -1 then
+							return getSmaller(tostring(a[1]), tostring(b[1]))
+						else
+							return res
+						end
+					end)
+					for i = 1, #data do
+						local arr = data[i]
+						local nowKey = arr[1]
+						local nowVal = arr[2]
+						local parseKey = parseData(nowKey, numTabs+1, true, overflow, isCyclic)
+						local parseVal = parseData(nowVal, numTabs+1, false, overflow, isCyclic)
+						if isDict then
+							local nowValType = typeof(nowVal)
+							local preStr = ""
+							local postStr = ""
+							if i > 1 and (nowValType == "table" or typeof(data[i-1][2]) ~= nowValType) then
+								preStr = "\n"
+							end
+							if i < #data and nowValType == "table" and typeof(data[i+1][2]) ~= "table" and typeof(data[i+1][2]) == nowValType then
+								postStr = "\n"
+							end
+							out[#out+1] = preStr .. string.rep(tabChar, numTabs+1) .. parseKey .. " = " .. parseVal .. ";" .. postStr
+						else
+							out[#out+1] = string.rep(tabChar, numTabs+1) .. parseVal .. ";"
+						end
+					end
+					out[#out+1] = string.rep(tabChar, numTabs) .. "}"
+				else
+					local data2 = {}
+					for i = 1, #data do
+						local arr = data[i]
+						local nowVal = arr[2]
+						local parseVal = parseData(nowVal, 0, false, overflow, isCyclic)
+						data2[#data2+1] = parseVal
+					end
+					out[#out+1] = "{" .. table.concat(data2, ", ") .. "}"
+				end
+	
+				return table.concat(out, "\n")
+			else
+				local returnVal = nil
+				if (objType == "string" or objType == "Content") and (not isKey or tonumber(obj:sub(1, 1))) then
+					local retVal = '"' .. objStr .. '"'
+					if isKey then
+						retVal = "[" .. retVal .. "]"
+					end
+					returnVal = retVal
+				elseif objType == "EnumItem" then
+					returnVal = "Enum." .. tostring(obj.EnumType) .. "." .. obj.Name
+				elseif objType == "Enum" then
+					returnVal = "Enum." .. objStr
+				elseif objType == "Instance" then
+					returnVal = obj.Parent and obj:GetFullName() or obj.ClassName
+				elseif objType == "CFrame" then
+					returnVal = "CFrame.new(" .. objStr .. ")"
+				elseif objType == "Vector3" then
+					returnVal = "Vector3.new(" .. objStr .. ")"
+				elseif objType == "Vector2" then
+					returnVal = "Vector2.new(" .. objStr .. ")"
+				elseif objType == "UDim2" then
+					returnVal = "UDim2.new(" .. objStr:gsub("[{}]", "") .. ")"
+				elseif objType == "BrickColor" then
+					returnVal = "BrickColor.new(\"" .. objStr .. "\")"
+				elseif objType == "Color3" then
+					returnVal = "Color3.new(" .. objStr .. ")"
+				elseif objType == "NumberRange" then
+					returnVal = "NumberRange.new(" .. objStr:gsub("^%s*(.-)%s*$", "%1"):gsub(" ", ", ") .. ")"
+				elseif objType == "PhysicalProperties" then
+					returnVal = "PhysicalProperties.new(" .. objStr .. ")"
+				else
+					returnVal = objStr
+				end
+				return returnVal
+			end
+		end
+	
+		function tableToString(t)
+			return parseData(t, 0, false, {}, nil, false)
+		end
+	
+		local detectClasses = {
+			BindableEvent = true;
+			BindableFunction = true;
+			RemoteEvent = true;
+			RemoteFunction = true;
+		}
+	
+		local classMethods = {
+			BindableEvent = "Fire";
+			BindableFunction = "Invoke";
+			RemoteEvent = "FireServer";
+			RemoteFunction = "InvokeServer";
+		}
+	
+		local realMethods = {}
+	
+		for name, enabled in next, detectClasses do
+			if enabled then
+				realMethods[classMethods[name]] = Instance.new(name)[classMethods[name]]
+			end
+		end
+	
+		for key, value in next, gameMeta do pseudoEnv[key] = value end
+	
+		local incId = 0
+	
+		local function getValues(self, key, ...)
+			return {realMethods[key](self, ...)}
+		end
+	
+		gameMeta.__index, gameMeta.__namecall = function(self, key)
+			if not realMethods[key] or _G.ignoreNames[self.Name] or not _G.scanRemotes then return pseudoEnv.__index(self, key) end
+			return function(_, ...)
+				incId = incId + 1
+				local nowId = incId
+				local strId = "[RemoteSpy_" .. nowId .. "]"
+	
+				local allPassed = {...}
+				local returnValues = {}
+	
+				local ok, data = pcall(getValues, self, key, ...)
+	
+				if ok then
+					returnValues = data
+					print("\n" .. strId .. " ClassName: " .. self.ClassName .. " | Path: " .. self:GetFullName() .. " | Method: " .. key .. "\n" .. strId .. " Packed Arguments: " .. tableToString(allPassed) .. "\n" .. strId .. " Packed Returned: " .. tableToString(returnValues) .. "\n")
+				else
+					print("\n" .. strId .. " ClassName: " .. self.ClassName .. " | Path: " .. self:GetFullName() .. " | Method: " .. key .. "\n" .. strId .. " Packed Arguments: " .. tableToString(allPassed) .. "\n" .. strId .. " Packed Returned: [ERROR] " .. data .. "\n")
+				end
+	
+				return unpack(returnValues)
+			end
+		end
+	
+		print("\nRan Vaeb's RemoteSpy\n")
+	end)
+end
+coroutine.wrap(AQVXWD_fake_script)()
+local function UFQN_fake_script() -- DragFrameMisc.Drag 
+	local script = Instance.new('LocalScript', DragFrameMisc)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(UFQN_fake_script)()
+local function LGZE_fake_script() -- DragFrameCredits.Drag 
+	local script = Instance.new('LocalScript', DragFrameCredits)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(LGZE_fake_script)()
